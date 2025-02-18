@@ -54,48 +54,6 @@
         });
       })();
     </script>
-
-    <script>
-      function sendEmail(event) {
-        event.preventDefault();
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const subject = document.getElementById("subject").value;
-        const message = document.getElementById("message").value;
-        const submitBtn = document.getElementById("submitBtn");
-        submitBtn.textContent = "Sending Mail...";
-
-        const templateParams = {
-          name: name,
-          from_name: email,
-          subject: subject,
-          message: message,
-        };
-
-        emailjs
-          .send("service_ureyvmz", "template_pu4ykka", templateParams)
-          .then(
-            function (response) {
-              const submitBtn = document.getElementById("submitBtn");
-              submitBtn.textContent = "Send Mail";
-              document.querySelector(".sent-message").style.display = "block";
-              document.querySelector(".error-message").style.display = "none";
-            },
-            function (error) {
-              document.querySelector(".error-message").style.display = "block";
-              document.querySelector(".sent-message").style.display = "none";
-            }
-          );
-      }
-    </script>
-
-    <!-- =======================================================
-  * Template Name: iPortfolio
-  * Updated: Jan 29 2024 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
   </head>
 
   <body>
@@ -113,23 +71,29 @@
           />
           <h1 class="text-light"><a href="index.html">A dev</a></h1>
           <div class="social-links mt-3">
+            <a
+              href="https://github.com/pavantechie1862"
+              target="_blank"
+              class="github"
+              ><i class="bx bxl-github"></i
+            ></a>
             <a href="mailto:pavanmarapalli171862@email.com" class="twitter"
               ><i class="bx bx-envelope"></i
             ></a>
-            <!-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
-            <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> -->
-            <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
+
             <a
               href="https://www.linkedin.com/in/pavan-marapalli"
               target="_blank"
               class="linkedin"
               ><i class="bx bxl-linkedin"></i
             ></a>
-            <a href="https://t.me/pavan3061" target="_blank" class="telegram"
-              ><i class="bx bxl-telegram"></i
-            ></a>
 
-            <a href="#contact"><i class="bi bi-telephone-fill"></i> </a>
+            <a
+              href="https://wa.me/918179769162?text=Hi%20Pavan,%20I%20found%20your%20profile%20and%20would%20like%20to%20connect!"
+              target="_blank"
+              class="whatsapp"
+              ><i class="bx bxl-whatsapp"></i
+            ></a>
           </div>
         </div>
 
@@ -145,25 +109,16 @@
                 ><i class="bx bx-user"></i> <span>About</span></a
               >
             </li>
-            <!-- <li>
-              <a href="#resume" class="nav-link scrollto"
-                ><i class="bx bx-file-blank"></i> <span>Resume</span></a
-              >
-            </li> -->
-            <!-- <li>
-              <a href="#portfolio" class="nav-link scrollto"
-                ><i class="bx bx-book-content"></i> <span>Portfolio</span></a
-              >
-            </li> -->
 
             <li>
-              <a href="#glimpse" class="nav-link scrollto"
-                ><i class="bx bx-user"></i> <span>Project Glimpse</span></a
+              <a href="#services" class="nav-link scrollto"
+                ><i class="bx bx-cog"></i><span>What i can do ?</span></a
               >
             </li>
+
             <li>
-              <a href="#services" class="nav-link scrollto"
-                ><i class="bx bx-cog"></i><span>What i Deliver</span></a
+              <a href="#project-glimpse" class="nav-link scrollto"
+                ><i class="bx bx-user"></i> <span>Project Glimpse</span></a
               >
             </li>
             <li>
@@ -187,10 +142,7 @@
         <h1>Pavan Marapalli</h1>
         <p>
           I'm a
-          <span
-            class="typed"
-            data-typed-items="Developer, Free Lancer, Community collaborator"
-          ></span>
+          <span class="typed" data-typed-items="Developer"></span>
         </p>
       </div>
     </section>
@@ -202,7 +154,7 @@
         <div class="container">
           <div class="section-title">
             <i>
-              <span style="color: #149ddd"> Greetings ! <br /><br /></span>
+              <h5 style="color: #149ddd">Greetings ! <br /><br /></h5>
               I believe in the power of technology to drive positive change. As
               a software engineer, I am committed to staying at the forefront of
               industry trends, continuously learning, and adapting to emerging
@@ -242,16 +194,49 @@
               of cloud technologies.
             </p>
 
+            <table
+              style="width: 100%; border-collapse: collapse; margin-top: 10px"
+            >
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ddd">Front-End</td>
+                <td style="padding: 10px; border: 1px solid #ddd">
+                  React JS, Redux, TypeScript, JavaScript, HTML, CSS
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ddd">Back-End</td>
+                <td style="padding: 10px; border: 1px solid #ddd">
+                  Node.js, MySQL, Sequelize ORM, DBMS
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ddd">
+                  Programming Languages
+                </td>
+                <td style="padding: 10px; border: 1px solid #ddd">
+                  Python, JavaScript, TypeScript
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ddd">
+                  CS Fundamentals
+                </td>
+                <td style="padding: 10px; border: 1px solid #ddd">
+                  System Designing,HLL, LLL, DSA, OS, DBMS, Basics of GCP & AWS
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ddd">
+                  Other Tools
+                </td>
+                <td style="padding: 10px; border: 1px solid #ddd">
+                  Git, Agile Methodologies
+                </td>
+              </tr>
+            </table>
+
             <br />
             <br />
-            <h4>Current Project</h4>
-            <p>
-              Presently, I am spearheading the development of a groundbreaking
-              application named LIMS - Laboratory Information Management System.
-              This innovative system is designed to simplify the maintenance of
-              laboratory records, providing an intuitive and efficient platform
-              for managing crucial data.
-            </p>
 
             <br />
             <br />
@@ -278,20 +263,150 @@
               shared learning.
             </p>
           </div>
-
-          <div class="row">
-            <div class="col-lg-12" data-aos="fade-right">
-              <p></p>
-            </div>
-          </div>
         </div>
       </section>
       <!-- End About Section -->
 
+      <!-- ======= Services Section ======= -->
+      <section id="services" class="services section-bg">
+        <div class="container">
+          <div class="section-title" data-aos="fade-up">
+            <h2>What I Bring to the Table!</h2>
+            <p>
+              As a dedicated full stack developer, I am passionate about
+              crafting efficient and scalable solutions. My technical expertise
+              and continuous learning drive me to stay ahead of the curve,
+              ensuring high-quality and innovative outcomes. I am excited to
+              contribute to forward-thinking teams and collaborate on
+              challenging projects that make an impact.
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up">
+              <div class="icon-box">
+                <div class="icon">
+                  <i class="bi bi-window"></i>
+                </div>
+                <h4 class="title">
+                  <a href="">Full Stack Development</a>
+                </h4>
+                <p class="description">
+                  Proficient in building end-to-end applications using React.js,
+                  Node.js, and TypeScript. I ensure seamless integration and a
+                  smooth user experience.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-support"></i></div>
+                <h4 class="title">
+                  <a href="">Scalable Architecture</a>
+                </h4>
+                <p class="description">
+                  Experienced in designing modular and maintainable systems,
+                  with a strong understanding of cloud technologies and database
+                  management.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="icon-box">
+                <div class="icon"><i class="bx bxl-github"></i></div>
+                <h4 class="title">
+                  <a href="">Agile Collaboration</a>
+                </h4>
+                <p class="description">
+                  Effective team player with hands-on experience in Agile
+                  methodologies, continuous integration, and version control
+                  using Git.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-desktop"></i></div>
+                <h4 class="title"><a href="">UI/UX Focus</a></h4>
+                <p class="description">
+                  Adept at creating intuitive and responsive user interfaces
+                  with a keen eye for design and user experience.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-cloud"></i></div>
+                <h4 class="title"><a href="">Cloud Integration</a></h4>
+                <p class="description">
+                  Proficient in deploying scalable applications on cloud
+                  platforms like AWS and GCP, optimizing performance and
+                  cost-efficiency.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-group"></i></div>
+                <h4 class="title"><a href="">Mentorship & Growth</a></h4>
+                <p class="description">
+                  Committed to continuous learning and knowledge sharing,
+                  fostering a culture of growth and collaboration within teams.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="section-title services-heading-container"
+            data-aos="fade-up"
+          >
+            <p>
+              I am enthusiastic about collaborating on impactful projects and
+              contributing to innovative solutions.
+              <a href="#contact">Get in touch!</a> Let's discuss how my skills
+              and experiences can contribute to your team’s success.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- End Services Section -->
+
       <section id="project-glimpse" class="project-glimpse">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
-            <h2>My Project Glimpse</h2>
+            <h2>My Current project</h2>
+            <p>
+              Presently, I am spearheading the development of a groundbreaking
+              application named LIMS - Laboratory Information Management System.
+              This innovative system is designed to simplify the maintenance of
+              laboratory records, providing an intuitive and efficient platform
+              for managing crucial data.
+            </p>
+            <br />
             <p>
               Take a look at some snapshots of my recent projects. These images
               showcase the variety and quality of the work I've done, providing
@@ -338,287 +453,7 @@
         </div>
       </section>
 
-      <!-- ======= Services Section ======= -->
-      <!-- ======= Services Section ======= -->
-      <section id="services" class="services section-bg">
-        <div class="container">
-          <div
-            class="section-title services-heading-container"
-            data-aos="fade-up"
-          >
-            <h2>What I Can Do!</h2>
-            <p>
-              As a dedicated full stack developer, I offer a range of services
-              to help you achieve your digital goals. With my expertise and
-              passion for technology, I strive to deliver exceptional results
-              that exceed your expectations. Whether you need a stunning
-              website, a custom application, or assistance with code
-              optimization, I am here to help you.
-            </p>
-          </div>
-
-          <div class="row">
-            <div class="col-lg-4 col-md-6" data-aos="fade-up">
-              <div class="icon-box">
-                <div class="icon">
-                  <i class="bi bi-window"></i>
-                </div>
-                <h4 class="title">
-                  <a href="">Application Development</a>
-                </h4>
-                <p class="description">
-                  Leverage my expertise in developing applications tailored to
-                  your unique requirements. From concept to deployment, I ensure
-                  a seamless and efficient development process.
-                </p>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bx bx-support"></i></div>
-                <h4 class="title">
-                  <a href="">Freelance Support</a>
-                </h4>
-                <p class="description">
-                  Need assistance with a specific project or ongoing support? As
-                  a freelance software engineer, I offer flexible and dedicated
-                  support to address your development challenges, ensuring
-                  timely and high-quality solutions.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bx bxl-github"></i></div>
-                <h4 class="title">
-                  <a href="">Open Source Contribution</a>
-                </h4>
-                <p class="description">
-                  Passionate about collaborative development, I actively
-                  contribute to open source projects. If you're a fellow
-                  developer with an open source initiative, I'm ready to lend my
-                  skills and expertise to advance shared goals.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bx bx-desktop"></i></div>
-                <h4 class="title"><a href="">Website Development</a></h4>
-                <p class="description">
-                  Elevate your online presence with a professionally crafted
-                  website or portfolio. I specialize in creating visually
-                  appealing and user-friendly websites that align with your
-                  brand identity and business goals.
-                </p>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bx bx-cloud"></i></div>
-                <h4 class="title"><a href="">Cloud Services</a></h4>
-                <p class="description">
-                  Simplify your technical infrastructure by utilizing my hosting
-                  services. Whether you need secure hosting for applications or
-                  websites, I provide reliable solutions to ensure optimal
-                  performance and scalability.
-                </p>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bx bx-group"></i></div>
-                <h4 class="title"><a href="">UpSkilling Freshers</a></h4>
-                <p class="description">
-                  I am passionate about contributing to the growth of the my and
-                  next generation of software engineers. Offering training and
-                  mentoring to freshers, I provide a hands-on learning
-                  experience to equip them with the skills and knowledge needed
-                  to excel in the dynamic field of software development.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="section-title services-heading-container"
-            data-aos="fade-up"
-          >
-            <p>
-              If you have any specific requirements or if there's something
-              missing from the list, <a href="#contact">Click here!</a> Let's
-              discuss how I can tailor my services to your needs. I look forward
-              to collaborating with you on your next project.
-            </p>
-          </div>
-        </div>
-      </section>
       <!-- End Services Section -->
-
-      <!-- End Services Section -->
-
-      <!-- ======= Testimonials Section ======= -->
-      <!-- <section id="testimonials" class="testimonials section-bg">
-        <div class="container" data-aos="fade-up">
-          <div class="section-header">
-            <h2>Meet My Team</h2>
-            <p>
-              Welcome to the powerhouse of innovation! Here, you'll find a group
-              of exceptional minds, all IIIT graduates.
-            </p>
-
-            <p>
-              Our team comprises brilliant individuals, each bringing their
-              unique set of skills and experiences to the table. Together, we
-              navigate the complexities of the software development landscape,
-              addressing real-world problems with a commitment to excellence.
-            </p>
-          </div>
-
-          <div class="slides-2 swiper-myteam">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="testimonial-wrap">
-                  <div class="testimonial-item">
-                    <img
-                      src="assets/img/MyTeam/testimonials-1.jpg"
-                      class="testimonial-img"
-                      alt=""
-                    />
-                    <h3>Sai teja Chunchu</h3>
-                    <h4>Application Developer @Tech.at.core</h4>
-
-                    <p>
-                      University topper and gold medalist from IIIT Basar,
-                      stands as a brilliant mind within our team. As an
-                      Application Developer at Tech.at.core, he is not just a
-                      problem solver but a gem, contributing his exceptional
-                      skills to every facet of our projects.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="testimonial-wrap">
-                  <div class="testimonial-item">
-                    <img
-                      src="assets/img/MyTeam/testimonials-1.jpg"
-                      class="testimonial-img"
-                      alt=""
-                    />
-                    <h3>Uday Sunkari</h3>
-                    <h4>Fullstack Dev @Gridlex</h4>
-
-                    <p>
-                      Versatile Full Stack Developer at Gridlex. His dynamic
-                      background includes successfully tackling a variety of
-                      problems, showcasing adaptability, and contributing
-                      significantly to the success of our projects.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="testimonial-wrap">
-                  <div class="testimonial-item">
-                    <img
-                      src="assets/img/MyTeam/testimonials-1.jpg"
-                      class="testimonial-img"
-                      alt=""
-                    />
-                    <h3>Sravani Manthapuram</h3>
-                    <h4>Frontend Dev @Vaasar labs</h4>
-                    <p>
-                      Renowned for her ability to create stunning visuals,
-                      Shravani crafts interfaces that not only meet but exceed
-                      expectations. Her dedication to aesthetic excellence
-                      elevates the user experience and adds a touch of
-                      brilliance to our projects.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="testimonial-wrap">
-                  <div class="testimonial-item">
-                    <img
-                      src="assets/img/MyTeam/testimonials-1.jpg"
-                      class="testimonial-img"
-                      alt=""
-                    />
-                    <h3>Rahul Polasa</h3>
-                    <h4>Associate engineer @OSI Digitals</h4>
-                    <p>
-                      brings fresh perspectives and a passion for learning to
-                      the team. His innovative mindset and commitment to
-                      excellence contribute to the success of our projects,
-                      making him an invaluable asset.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="testimonial-wrap">
-                  <div class="testimonial-item">
-                    <img
-                      src="assets/img/MyTeam/testimonials-1.jpg"
-                      class="testimonial-img"
-                      alt=""
-                    />
-                    <h3>Anil Annaldas</h3>
-                    <h4>Embedded System engineer @Efftronics</h4>
-                    <p>
-                      His proficiency in embedded systems ensures that our
-                      projects incorporate cutting-edge technology, providing
-                      efficient and reliable solutions. Anil's dedication to
-                      excellence significantly enhances the technological
-                      foundation of our endeavors.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-
-          <h2>Explore Opportunities with Us</h2>
-          <p>
-            If you find inspiration in the dynamic challenges we embrace and
-            value a collaborative team spirit, we invite you to connect with us.
-            Send us an email with your resume attached at
-            <a href="mailto:pavanmarapalli171862@gmail.com" class="envilope"
-              ><i>Here</i></a
-            >
-            , and let's explore exciting opportunities together!
-          </p>
-        </div>
-      </section> -->
 
       <!-- ======= Contact Section ======= -->
       <section id="contact" class="contact">
@@ -632,58 +467,48 @@
               thoughts, I'm here for you.
             </p>
             <div class="social-links mt-3 text-center">
+              <a
+                href="https://github.com/pavantechie1862"
+                target="_blank"
+                class="github"
+                ><i class="bx bxl-github"></i
+              ></a>
               <a href="mailto:pavanmarapalli171862@email.com" class="twitter"
                 ><i class="bx bx-envelope"></i
               ></a>
-              <!-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
-              <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> -->
-              <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
+
               <a
                 href="https://www.linkedin.com/in/pavan-marapalli"
                 target="_blank"
                 class="linkedin"
                 ><i class="bx bxl-linkedin"></i
               ></a>
+
+              <a
+                href="https://wa.me/918179769162?text=Hi%20Pavan,%20I%20found%20your%20profile%20and%20would%20like%20to%20connect!"
+                target="_blank"
+                class="whatsapp"
+                ><i class="bx bxl-whatsapp"></i
+              ></a>
               <a href="https://t.me/pavan3061" target="_blank" class="telegram"
                 ><i class="bx bxl-telegram"></i
               ></a>
+
+              <a href="#" target="_blank" class="leetcode" title="LeetCode">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                  alt="LeetCode"
+                  style="width: 24px; height: 24px"
+                />
+              </a>
             </div>
           </div>
 
           <div class="row" data-aos="fade-in">
-            <!-- <div class="col-lg-5 d-flex align-items-stretch">
-              <div class="info">
-                <div class="address">
-                  <i class="bi bi-geo-alt"></i>
-                  <h4>Location:</h4>
-                  <p>A108 Adam Street, New York, NY 535022</p>
-                </div>
-
-                <div class="email">
-                  <i class="bi bi-envelope"></i>
-                  <h4>Email:</h4>
-                  <p>info@example.com</p>
-                </div>
-
-                <div class="phone">
-                  <i class="bi bi-phone"></i>
-                  <h4>Call:</h4>
-                  <p>+1 5589 55488 55s</p>
-                </div>
-
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-                  frameborder="0"
-                  style="border: 0; width: 100%; height: 290px"
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </div> -->
-
             <div
               class="col-lg-8 mt-5 mt-lg-0 d-flex align-items-stretch m-auto"
             >
-              <form onsubmit="sendEmail(event)" class="php-email-form">
+              <form class="php-email-form">
                 <div class="row">
                   <div class="form-group col-md-6">
                     <label for="name">Your Name</label>
@@ -804,6 +629,59 @@
           h1: "Website",
           p: "Website developed using React.js, TypeScript, Reactstrap, and Redux Toolkit. Comprising many functionalities, each functionality is a miracle in itself",
         },
+        {
+          img: "emp_login_page.png",
+          h1: "Login Page",
+          p: "Secure login page for users to access their accounts. Ensures authentication and authorization for a personalized experience.",
+        },
+
+        {
+          img: "emp_dashboard.png",
+          h1: "Employee Profile",
+          p: "Displays quick navigation links and essential personal information, providing a streamlined overview for employees.",
+        },
+
+        {
+          img: "Orders.png",
+          h1: "Orders Management",
+          p: "Effortlessly manage orders with advanced filters and streamlined controls, enhancing the overall order management experience.",
+        },
+
+        {
+          img: "Day_wise_stats.png",
+          h1: "Day Wise Stats",
+          p: "Displays day-wise order information, providing a quick overview of daily activities in a single, easy-to-navigate screen.",
+        },
+
+        {
+          img: "lab_home_page.png",
+          h1: "Laboratory Home Page",
+          p: "Manage all laboratory activities seamlessly from this central hub, featuring quick links and streamlined navigation for efficient workflow management.",
+        },
+
+        {
+          img: "tracking_samples.png",
+          h1: "Tracking Samples",
+          p: "Track each sample's journey from initiation to report delivery. This screen provides comprehensive management tools for every stage of the sample lifecycle.",
+        },
+
+        {
+          img: "crm.png",
+          h1: "Customers Management",
+          p: "Easily maintain records of customers and their interactions with our organization, ensuring efficient and organized management of customer information.",
+        },
+
+        {
+          img: "customer_profile.png",
+          h1: "Customers Profile",
+          p: "Detailed view of customer information, including records and related statistics, providing comprehensive insights into customer interactions and history.",
+        },
+
+        {
+          img: "scope.png",
+          h1: "Scope",
+          p: "This screen provides detailed information about our scope of tests, including various options to manage scope-related aspects like pricing and other test details.",
+        },
       ];
 
       const carouselIndicators = document.getElementById("carousel-indicators");
@@ -826,7 +704,8 @@
         carouselItem.className = `carousel-item ${index === 0 ? "active" : ""}`;
 
         const img = document.createElement("img");
-        img.src = "/assets/img/glimpse/" + eachImage.img;
+        img.src =
+          "https://lims-snaps.s3.ap-south-1.amazonaws.com/" + eachImage.img;
         img.className = "d-block w-100";
 
         img.alt = `Slide ${index + 1}`;
