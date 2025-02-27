@@ -50,7 +50,7 @@
     <script type="text/javascript">
       (function () {
         emailjs.init({
-          publicKey: "SnZGtZJTnA7R4LtL4",
+          publicKey: "pl00HojiAxCvQ_yk4",
         });
       })();
     </script>
@@ -519,11 +519,11 @@
             </div>
           </div>
 
-          <!-- <div class="row" data-aos="fade-in">
+          <div class="row" data-aos="fade-in">
             <div
               class="col-lg-8 mt-5 mt-lg-0 d-flex align-items-stretch m-auto"
             >
-              <form class="php-email-form">
+              <form  id="emailForm"  (submit)="sendMail()" class="php-email-form">
                 <div class="row">
                   <div class="form-group col-md-6">
                     <label for="name">Your Name</label>
@@ -580,7 +580,7 @@
                 </div>
               </form>
             </div>
-          </div> -->
+          </div>
         </div>
       </section>
       <!-- End Contact Section -->

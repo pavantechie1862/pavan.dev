@@ -358,3 +358,32 @@
    */
   new PureCounter();
 })();
+
+
+function sendMail() {  
+  const getValue = (id) => {
+    return document.getElementById(id).value;
+  }
+  const emptyValue = (id) =>{
+    document.getElementById(id).value = "";
+  } 
+
+  const idList = ['name', 'email', 'subject', 'message'];
+
+  let params = {};
+  idList.forEach((id) => {
+    params[id] = getValue(id);
+  });
+
+  const serviceId = "service_24kj1bd";
+  const templateId = "template_sojlfyj";
+
+  emailjs.send(serviceId, templateId, params)
+    .then(response => {
+      idList.forEach(emptyValue);
+      console.log("Email sent successfully!", response);
+    })
+    .catch(error => {
+      console.error("Failed to send email", error);
+    });
+}
