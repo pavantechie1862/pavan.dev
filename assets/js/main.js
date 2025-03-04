@@ -361,6 +361,7 @@
 
 
 function sendMail() {  
+  event.preventDefault();
   const getValue = (id) => {
     return document.getElementById(id).value;
   }
@@ -378,12 +379,42 @@ function sendMail() {
   const serviceId = "service_24kj1bd";
   const templateId = "template_sojlfyj";
 
+  const loadingDiv = document.querySelector(".loading");
+  const errorDiv = document.querySelector(".error-message");
+  const successDiv = document.querySelector(".sent-message");
+  const submitBtn = document.getElementById("submitBtn");
+  submitBtn.disabled = true;
+
+
+  // Show loading state
+  loadingDiv.style.display = "block";
+  errorDiv.style.display = "none";
+  successDiv.style.display = "none";
+
+      // Validate fields
+      if (!params.name || !params.email || !params.subject || !params.message) {
+        loadingDiv.style.display = "none";
+        errorDiv.style.display = "block";
+        errorDiv.innerText = "Please fill in all fields.";
+        submitBtn.disabled = false; // Re-enable button
+        return;
+      }
+  console.log(submitBtn);
+  
+
   emailjs.send(serviceId, templateId, params)
-    .then(response => {
-      idList.forEach(emptyValue);
-      console.log("Email sent successfully!", response);
-    })
-    .catch(error => {
-      console.error("Failed to send email", error);
-    });
+  .then(response => {
+    loadingDiv.style.display = "none";
+    successDiv.style.display = "block";
+    console.log("Email sent successfully!", response);
+  })
+  .catch(error => {
+    loadingDiv.style.display = "none";
+    errorDiv.innerText = "Your message could not be sent. Please try again.";
+    errorDiv.style.display = "block";
+    console.error("Failed to send email", error);
+  })
+  .finally(() => {
+    submitBtn.disabled = false; // Re-enable button after success/failure
+  });
 }

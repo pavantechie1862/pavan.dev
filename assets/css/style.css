@@ -1420,3 +1420,9 @@ body::-webkit-scrollbar-thumb:hover {
   padding: 10px;
   border-radius: 4px;
 }
+
+button:disabled {
+  background-color: #ccc !important;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
