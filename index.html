@@ -523,7 +523,7 @@
             <div
               class="col-lg-8 mt-5 mt-lg-0 d-flex align-items-stretch m-auto"
             >
-              <form  id="emailForm"  class="php-email-form">
+              <form id="emailForm" class="php-email-form">
                 <div class="row">
                   <div class="form-group col-md-6">
                     <label for="name">Your Name</label>
@@ -566,17 +566,23 @@
                     required
                   ></textarea>
                 </div>
-                <div class="my-3">
+                <div class="col-md-12 text-center">
                   <div class="loading">Loading</div>
-                  <div class="error-message" style="display: none">
-                    Your message could not be sent. Please try again.
+                  <div class="error-message"></div>
+                  <div class="sent-message">
+                    Your message has been sent. Thank you!
                   </div>
-                  <div class="sent-message" style="display: none">
-                    Your mail has been sent. Thank you!
+
+                  <div class="text-center">
+                    <button id="submitBtn" onclick="sendMail()" type="submit">
+                      Send Mail
+                    </button>
                   </div>
                 </div>
                 <div class="text-center">
-                  <button id="submitBtn" onclick="sendMail()" type="submit">Send Mail</button>
+                  <button id="submitBtn" onclick="sendMail()" type="submit">
+                    Send Mail
+                  </button>
                 </div>
               </form>
             </div>

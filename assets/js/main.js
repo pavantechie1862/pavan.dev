@@ -1,10 +1,3 @@
-/**
- * Template Name: iPortfolio
- * Updated: Jan 29 2024 with Bootstrap v5.3.2
- * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- */
 (function () {
   "use strict";
 
@@ -359,17 +352,16 @@
   new PureCounter();
 })();
 
-
-function sendMail() {  
+function sendMail() {
   event.preventDefault();
   const getValue = (id) => {
     return document.getElementById(id).value;
-  }
-  const emptyValue = (id) =>{
+  };
+  const emptyValue = (id) => {
     document.getElementById(id).value = "";
-  } 
+  };
 
-  const idList = ['name', 'email', 'subject', 'message'];
+  const idList = ["name", "email", "subject", "message"];
 
   let params = {};
   idList.forEach((id) => {
@@ -385,36 +377,34 @@ function sendMail() {
   const submitBtn = document.getElementById("submitBtn");
   submitBtn.disabled = true;
 
-
   // Show loading state
   loadingDiv.style.display = "block";
   errorDiv.style.display = "none";
   successDiv.style.display = "none";
 
-      // Validate fields
-      if (!params.name || !params.email || !params.subject || !params.message) {
-        loadingDiv.style.display = "none";
-        errorDiv.style.display = "block";
-        errorDiv.innerText = "Please fill in all fields.";
-        submitBtn.disabled = false; // Re-enable button
-        return;
-      }
-  console.log(submitBtn);
-  
-
-  emailjs.send(serviceId, templateId, params)
-  .then(response => {
+  // Validate fields
+  if (!params.name || !params.email || !params.subject || !params.message) {
     loadingDiv.style.display = "none";
-    successDiv.style.display = "block";
-    console.log("Email sent successfully!", response);
-  })
-  .catch(error => {
-    loadingDiv.style.display = "none";
-    errorDiv.innerText = "Your message could not be sent. Please try again.";
     errorDiv.style.display = "block";
-    console.error("Failed to send email", error);
-  })
-  .finally(() => {
-    submitBtn.disabled = false; // Re-enable button after success/failure
-  });
+    errorDiv.innerText = "Please fill in all fields.";
+    submitBtn.disabled = false; // Re-enable button
+    return;
+  }
+
+  emailjs
+    .send(serviceId, templateId, params)
+    .then((response) => {
+      loadingDiv.style.display = "none";
+      successDiv.style.display = "block";
+      console.log("Email sent successfully!", response);
+    })
+    .catch((error) => {
+      loadingDiv.style.display = "none";
+      errorDiv.innerText = "Your message could not be sent. Please try again.";
+      errorDiv.style.display = "block";
+      console.log("Failed to send email", error);
+    })
+    .finally(() => {
+      submitBtn.disabled = false; // Re-enable button after success/failure
+    });
 }
