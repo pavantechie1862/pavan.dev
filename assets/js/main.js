@@ -354,6 +354,7 @@
 
 function sendMail() {
   event.preventDefault();
+
   const getValue = (id) => {
     return document.getElementById(id).value;
   };
@@ -397,6 +398,7 @@ function sendMail() {
       loadingDiv.style.display = "none";
       successDiv.style.display = "block";
       console.log("Email sent successfully!", response);
+      idList.forEach((id) => emptyValue(id));
     })
     .catch((error) => {
       loadingDiv.style.display = "none";
